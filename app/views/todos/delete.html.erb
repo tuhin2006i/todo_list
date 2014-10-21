@@ -1,0 +1,13 @@
+<div class="panel">
+  <h2>Delete Todo</h2>
+
+  <%= form_for(:todo, :url => {:action => 'destroy', :id => @todo.id}) do |f| %>
+
+      <p>Are you sure you want to permanently delete "<%= @todo.title %>" todo?</p>
+      <div class="form-buttons">
+        <%= submit_tag("Delete todo", :class => 'radius button') %>
+        <%= link_to("Cancel", {:action => 'index'}, :class => 'radius button') %>
+      </div>
+
+  <% end %>
+</div>

@@ -1,0 +1,33 @@
+<% @page_title = "Todo List" %>
+<div class="large-12 columns">
+  <h2>Todo List</h2>
+
+  <%= link_to("Add New Todo", {:action => 'new'}, :class => 'radius button') %>
+
+  <div class="panel">Total <%= pluralize(@todos.size, "pending " "todo") %> found</div>
+  <table class="large-12 columns">
+    <tr>
+      <th>&nbsp;</th>
+      <th>Title</th>
+      <th>Deadline</th>
+      <th>Completion Date</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+    <% count = 0 %>
+    <% @todos.each do |todo| count = count +1 %>
+        <tr">
+        <td><%= count %></td>
+        <td><%= todo.title %></td>
+        <td><%= todo.deadline%> </td>
+        <td><%= todo.completion_date %></td>
+        <td><%= todo.status %></td>
+        <td class="actions">
+          <%= link_to("Show", {:action => 'show', :id => todo.id}, :class => 'button [tiny small large]') %>
+          <%= link_to("Edit", {:action => 'edit', :id => todo.id}, :class => 'button [tiny small large]') %>
+          <%= link_to("Delete", {:action => 'delete', :id=> todo.id}, :class => 'button [tiny small large]') %>
+        </td>
+        </tr>
+    <% end %>
+  </table>
+</div>

@@ -1,0 +1,16 @@
+<%= error_messages_for(@todo) %>
+
+<table summary="Todo form fields">
+  <tr>
+    <th><%= f.label(:title) %></th>
+    <td><%= f.text_field(:title) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:description) %></th>
+    <td><%= f.text_area(:description) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:deadline) %></th>
+    <td><%= f.datetime_select(:deadline) %></td>
+  </tr>
+</table>

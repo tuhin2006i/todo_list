@@ -1,0 +1,46 @@
+<% @page_title = "User Login" %>
+
+<div class="login">
+
+  <%= form_tag(:action => 'attempt_login') do %>
+      <div class="row">
+        <div class="large-6 columns">
+          <div class="row collapse prefix-radius">
+            <div class="small-3 columns">
+              <span class="inline"><%= label_tag(:username) %></span>
+            </div>
+            <div class="small-9 columns">
+              <%= text_field_tag(:username) %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          <div class="row collapse prefix-radius">
+            <div class="small-3 columns">
+              <span class="inline"><%= label_tag(:password) %></span>
+            </div>
+            <div class="small-9 columns">
+              <%= password_field_tag(:password) %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          &nbsp;
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          <%= submit_tag("Log In", :class => 'radius button') %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          <%= link_to("Sign up", {:controller => 'users', :action => 'new'} ) %>
+        </div>
+      </div>
+  <% end %>
+</div>

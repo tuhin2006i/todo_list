@@ -1,0 +1,83 @@
+<div class="user new">
+  <h2>User registration</h2>
+
+  <%= form_for(:user, :url => {:action => 'create'}) do |f| %>
+      <div class="row">
+        <div class="large-8 columns">
+          <%= error_messages_for(@user) %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          <div class="row collapse prefix-radius">
+            <div class="small-3 columns">
+              <span class="inline"><%= f.label(:name) %></span>
+            </div>
+            <div class="small-9 columns">
+              <%= f.text_field(:name) %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          <div class="row collapse prefix-radius">
+            <div class="small-3 columns">
+              <span class="inline"><%= f.label(:username) %></span>
+            </div>
+            <div class="small-9 columns">
+              <%= f.text_field(:username) %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          <div class="row collapse prefix-radius">
+            <div class="small-3 columns">
+              <span class="inline"><%= f.label(:password) %></span>
+            </div>
+            <div class="small-9 columns inline-datetime">
+              <%= f.password_field(:password) %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          <div class="row collapse prefix-radius">
+            <div class="small-3 columns">
+              <span class="inline"><%= f.label(:email) %></span>
+            </div>
+            <div class="small-9 columns">
+              <%= f.text_field(:email) %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          <div class="row collapse prefix-radius">
+            <div class="small-3 columns">
+              <span class="inline"><%= f.label(:phone) %></span>
+            </div>
+            <div class="small-9 columns">
+              <%= f.text_field(:phone) %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          &nbsp;
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          <%= submit_tag("Registration", :class => 'radius button') %>
+        </div>
+      </div>
+  <% end %>
+
+</div>
+

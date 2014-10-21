@@ -1,0 +1,95 @@
+<%= link_to("<< Back to the list", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="todo new">
+  <h2>Update todo</h2>
+
+  <%= form_for(:todo, :url => {:action => 'update', :id => @todo.id}) do |f| %>
+      <div class="row">
+        <div class="large-8 columns">
+          <%= error_messages_for(@todo) %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          <div class="row collapse prefix-radius">
+            <div class="small-3 columns">
+              <span class="inline"><%= f.label(:title) %></span>
+            </div>
+            <div class="small-9 columns">
+              <%= f.text_field(:title) %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          <div class="row collapse prefix-radius">
+            <div class="small-3 columns">
+              <span class="inline"><%= f.label(:description) %></span>
+            </div>
+            <div class="small-9 columns">
+              <%= f.text_area(:description) %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          <div class="row collapse prefix-radius">
+            <div class="small-3 columns">
+              <span class="inline"><%= f.label(:deadline) %></span>
+            </div>
+            <div class="small-9 columns inline-datetime">
+              <%= f.datetime_select(:deadline) %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          &nbsp;
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          <div class="row collapse prefix-radius">
+            <div class="small-3 columns">
+              <span class="inline"><%= f.label(:completion_date) %></span>
+            </div>
+            <div class="small-9 columns inline-datetime">
+              <%= f.datetime_select(:completion_date) %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          &nbsp;
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          <div class="row collapse prefix-radius">
+            <div class="small-3 columns">
+              <span class="inline"><%= f.label(:status) %></span>
+            </div>
+            <div class="small-9 columns">
+              <%= f.radio_button(:status, 'pending') %> Pending
+              <%= f.radio_button(:status, 'completed') %> Completed
+              <%= f.radio_button(:status, 'overdue') %> Overdue
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          &nbsp;
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns">
+          <%= submit_tag("Update todo", :class => 'radius button') %>
+        </div>
+      </div>
+  <% end %>
+</div>

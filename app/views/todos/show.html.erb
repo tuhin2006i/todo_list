@@ -1,0 +1,128 @@
+<div class="panel">
+  <h2>Details Todo</h2>
+
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="row collapse prefix-radius">
+        <div class="small-4 columns">
+          Title
+        </div>
+        <div class="small-8 columns">
+          <%= @todo.title %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="row collapse prefix-radius">
+        <div class="small-4 columns">
+          Description
+        </div>
+        <div class="small-8 columns">
+          <%= @todo.description %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="row collapse prefix-radius">
+        <div class="small-4 columns">
+          Deadline
+        </div>
+        <div class="small-8 columns">
+          <%= @todo.deadline %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="row collapse prefix-radius">
+        <div class="small-4 columns">
+          Completion Date
+        </div>
+        <div class="small-8 columns">
+          <%= @todo.completion_date %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="row collapse prefix-radius">
+        <div class="small-4 columns">
+          Status
+        </div>
+        <div class="small-8 columns">
+          <%= @todo.status %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="row collapse prefix-radius">
+        <div class="small-4 columns">
+          Created At
+        </div>
+        <div class="small-8 columns">
+          <%= @todo.created_at %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="row collapse prefix-radius">
+        <div class="small-4 columns">
+          Updated At
+        </div>
+        <div class="small-8 columns">
+          <%= @todo.updated_at %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      <%= link_to("Back to list", {:action => 'index'}, :class => 'radius button') %>
+    </div>
+  </div>
+</div>
